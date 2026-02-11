@@ -59,13 +59,13 @@
   .app-preview-inner { max-width: 900px; margin: 0 auto; }
   .app-preview .section-label, .app-preview .section-title, .app-preview .section-subtitle { text-align: center; }
   .phone-row { display: flex; align-items: flex-start; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 2.5rem; }
-  .phone-row img { width: 220px; border-radius: 28px; box-shadow: 0 20px 60px rgba(0,0,0,0.15); transition: transform 0.3s; }
+  .phone-row { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 500px; margin: 2.5rem auto 0; } .phone-row img { width: 100%; transition: transform 0.3s; }
   .phone-row img:hover { transform: translateY(-6px); }
   .phone-row-3 { display: flex; align-items: flex-start; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 2.5rem; }
-  .phone-row-3 img { width: 200px; border-radius: 28px; box-shadow: 0 20px 60px rgba(0,0,0,0.15); transition: transform 0.3s; }
+  .phone-row-3 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; max-width: 500px; margin: 2.5rem auto 0; } .phone-row-3 img { width: 100%; transition: transform 0.3s; }
   .phone-row-3 img:hover { transform: translateY(-6px); }
   .phone-single { margin-top: 2.5rem; }
-  .phone-single img { width: 260px; border-radius: 28px; box-shadow: 0 20px 60px rgba(0,0,0,0.15); }
+  .phone-single img { width: 260px; }
   .credibility { padding: 5rem 1.5rem; text-align: center; }
   .credibility-inner { max-width: 750px; margin: 0 auto; }
   .cred-headline { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 1.2rem; }
@@ -194,7 +194,7 @@
     .row-2, .values-grid, .roadmap-grid, .pricing-grid, .pain-points, .why-uk-grid, .steps { grid-template-columns: 1fr; }
     .trust-strip { gap: 1rem; padding: 1.2rem; } .cred-stats { gap: 1.5rem; }
     .price-amount { font-size: 2.2rem; } .countdown-bar .cd-num { font-size: 1.4rem; }
-    .phone-row img { width: 180px; } .phone-row-3 img { width: 160px; } .phone-single img { width: 220px; }
+    
   }
 </style>
 </head>
@@ -301,7 +301,6 @@
     <div class="phone-row-3">
       <img src="4.png" alt="Auction house listing with featured badge, stats and contact buttons">
       <img src="5.png" alt="Contact information, location map and services">
-      <img src="3.png" alt="Saved auction houses with alerts and following features">
     </div>
   </div>
 </section>
@@ -320,6 +319,16 @@
     <div class="value-card"><div class="value-icon">🇬🇧</div><div class="value-text"><h4>Built by the Trade, for the Trade</h4><p>20+ years marketing experience and 7+ years in the saleroom. We don't just understand the industry — we've lived it.</p></div></div>
   </div>
 </div></section>
+
+<!-- APP PREVIEW: Saved/Favourites -->
+<section class="app-preview reveal">
+  <div class="app-preview-inner">
+    <p class="section-label">Buyer Experience</p>
+    <h2 class="section-title">Buyers Save, Follow &amp; Get<br>Alerts for Your Auctions</h2>
+    <p class="section-subtitle">Buyers can save your auction house, turn on alerts, and never miss a sale. That's repeat traffic — on autopilot.</p>
+    <div style="max-width: 240px; margin: 2rem auto 0;"><img src="3.png" alt="Saved auction houses with alerts and following features" style="width: 100%;"></div>
+  </div>
+</section>
 
 <section class="roadmap reveal">
   <p class="section-label">What's Coming</p>
