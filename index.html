@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
+<script>document.documentElement.classList.remove('no-js')</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Auction App — The UK's First Auctioneers Directory App</title>
@@ -8,33 +9,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
   :root {
-    --white: #FFFFFF;
-    --off-white: #F8FAFC;
-    --light-grey: #F1F5F9;
-    --border: #E2E8F0;
-    --text-primary: #0F172A;
-    --text-secondary: #475569;
-    --text-muted: #94A3B8;
-    --blue-50: #EFF6FF;
-    --blue-100: #DBEAFE;
-    --blue-200: #BFDBFE;
-    --blue-500: #3B82F6;
-    --blue-600: #2563EB;
-    --blue-700: #1D4ED8;
-    --blue-800: #1E40AF;
-    --blue-900: #1E3A5F;
+    --white: #FFFFFF; --off-white: #F8FAFC; --light-grey: #F1F5F9; --border: #E2E8F0;
+    --text-primary: #0F172A; --text-secondary: #475569; --text-muted: #94A3B8;
+    --blue-50: #EFF6FF; --blue-100: #DBEAFE; --blue-200: #BFDBFE; --blue-500: #3B82F6;
+    --blue-600: #2563EB; --blue-700: #1D4ED8; --blue-800: #1E40AF;
     --gradient: linear-gradient(135deg, #2563EB, #7C3AED);
     --gradient-soft: linear-gradient(135deg, #EFF6FF, #EDE9FE);
     --gradient-btn: linear-gradient(135deg, #2563EB, #4F46E5);
-    --emerald: #059669;
-    --emerald-light: #D1FAE5;
-    --amber: #D97706;
-    --amber-light: #FEF3C7;
-    --violet: #7C3AED;
-    --violet-light: #EDE9FE;
-    --red: #DC2626;
-    --radius: 12px;
-    --radius-lg: 20px;
+    --emerald: #059669; --emerald-light: #D1FAE5;
+    --amber: #D97706; --amber-light: #FEF3C7;
+    --violet: #7C3AED; --violet-light: #EDE9FE;
+    --red: #DC2626; --radius: 12px; --radius-lg: 20px;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--text-primary); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
@@ -50,7 +35,7 @@
   .hero-badge .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--blue-600); animation: blink 2s infinite; }
   .first-badge { display: inline-block; padding: 0.3rem 0.8rem; background: var(--gradient); color: white; font-size: 0.7rem; font-weight: 700; border-radius: 100px; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 1.2rem; animation: fadeUp 0.6s ease-out 0.05s both; }
   @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
-  .hero h1 { font-size: clamp(2.5rem, 6vw, 4.2rem); font-weight: 800; color: var(--text-primary); line-height: 1.08; margin-bottom: 1.2rem; letter-spacing: -0.03em; animation: fadeUp 0.7s ease-out 0.1s both; }
+  .hero h1 { font-size: clamp(2.5rem, 6vw, 4.2rem); font-weight: 800; line-height: 1.08; margin-bottom: 1.2rem; letter-spacing: -0.03em; animation: fadeUp 0.7s ease-out 0.1s both; }
   .hero h1 .grad { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
   .hero-sub { font-size: clamp(1rem, 2vw, 1.15rem); font-weight: 400; color: var(--text-secondary); max-width: 560px; line-height: 1.7; margin-bottom: 2rem; animation: fadeUp 0.7s ease-out 0.2s both; }
   .hero-cta-row { display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; animation: fadeUp 0.7s ease-out 0.3s both; flex-wrap: wrap; justify-content: center; }
@@ -70,6 +55,17 @@
   .countdown-bar .cd-num { font-size: 1.8rem; font-weight: 800; line-height: 1; }
   .countdown-bar .cd-txt { font-size: 0.65rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; opacity: 0.8; }
   .countdown-bar .cd-sep { font-size: 1.5rem; font-weight: 300; opacity: 0.5; }
+  .app-preview { padding: 4rem 1.5rem; text-align: center; }
+  .app-preview-inner { max-width: 900px; margin: 0 auto; }
+  .app-preview .section-label, .app-preview .section-title, .app-preview .section-subtitle { text-align: center; }
+  .phone-row { display: flex; align-items: flex-start; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 2.5rem; }
+  .phone-row img { width: 220px; border-radius: 28px; box-shadow: 0 20px 60px rgba(0,0,0,0.15); transition: transform 0.3s; }
+  .phone-row img:hover { transform: translateY(-6px); }
+  .phone-row-3 { display: flex; align-items: flex-start; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 2.5rem; }
+  .phone-row-3 img { width: 200px; border-radius: 28px; box-shadow: 0 20px 60px rgba(0,0,0,0.15); transition: transform 0.3s; }
+  .phone-row-3 img:hover { transform: translateY(-6px); }
+  .phone-single { margin-top: 2.5rem; }
+  .phone-single img { width: 260px; border-radius: 28px; box-shadow: 0 20px 60px rgba(0,0,0,0.15); }
   .credibility { padding: 5rem 1.5rem; text-align: center; }
   .credibility-inner { max-width: 750px; margin: 0 auto; }
   .cred-headline { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 1.2rem; }
@@ -137,7 +133,7 @@
   .price-card h3 { font-size: 1.25rem; font-weight: 800; margin-bottom: 0.3rem; }
   .tier-desc { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.5; }
   .price-row { display: flex; align-items: baseline; gap: 0.3rem; margin-bottom: 0.15rem; }
-  .price-amount { font-size: 2.8rem; font-weight: 800; color: var(--text-primary); line-height: 1; letter-spacing: -0.03em; }
+  .price-amount { font-size: 2.8rem; font-weight: 800; line-height: 1; letter-spacing: -0.03em; }
   .price-period { font-size: 0.85rem; color: var(--text-muted); }
   .price-was { font-size: 0.8rem; color: var(--text-muted); text-decoration: line-through; margin-bottom: 0.15rem; display: block; }
   .price-lock { font-size: 0.73rem; color: var(--blue-600); font-weight: 600; margin-bottom: 1.5rem; display: block; }
@@ -191,7 +187,15 @@
   @keyframes fadeDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
   .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.5s ease, transform 0.5s ease; }
   .reveal.visible { opacity: 1; transform: translateY(0); }
-  @media (max-width: 700px) { nav { padding: 0.8rem 1.2rem; } .nav-links a:not(.nav-cta) { display: none; } .form-card { padding: 1.8rem 1.4rem; } .row-2, .values-grid, .roadmap-grid, .pricing-grid, .pain-points, .why-uk-grid, .steps { grid-template-columns: 1fr; } .trust-strip { gap: 1rem; padding: 1.2rem; } .cred-stats { gap: 1.5rem; } .price-amount { font-size: 2.2rem; } .countdown-bar .cd-num { font-size: 1.4rem; } }
+  .no-js .reveal { opacity: 1; transform: none; }
+  @media (max-width: 700px) {
+    nav { padding: 0.8rem 1.2rem; } .nav-links a:not(.nav-cta) { display: none; }
+    .form-card { padding: 1.8rem 1.4rem; }
+    .row-2, .values-grid, .roadmap-grid, .pricing-grid, .pain-points, .why-uk-grid, .steps { grid-template-columns: 1fr; }
+    .trust-strip { gap: 1rem; padding: 1.2rem; } .cred-stats { gap: 1.5rem; }
+    .price-amount { font-size: 2.2rem; } .countdown-bar .cd-num { font-size: 1.4rem; }
+    .phone-row img { width: 180px; } .phone-row-3 img { width: 160px; } .phone-single img { width: 220px; }
+  }
 </style>
 </head>
 <body>
@@ -225,6 +229,19 @@
 </div>
 
 <div class="notice-bar"><strong>This is a pre-launch registration.</strong> You won't be charged now. Register your interest, review everything when we set up your listing, and only pay when you're happy to go live.</div>
+
+<!-- APP PREVIEW: Home + Map -->
+<section class="app-preview reveal">
+  <div class="app-preview-inner">
+    <p class="section-label">See the App</p>
+    <h2 class="section-title">A Modern App Built for<br>the Auction Industry</h2>
+    <p class="section-subtitle">Browse by category, explore the map, find auctioneers near you — this is what your buyers will see.</p>
+    <div class="phone-row">
+      <img src="1.png" alt="Auction App home screen showing categories and map">
+      <img src="2.png" alt="Auction App UK map with auction house locations">
+    </div>
+  </div>
+</section>
 
 <section class="credibility reveal"><div class="credibility-inner">
   <h2 class="cred-headline">Built by a Team Who's Been<br>on the Other Side of the Rostrum</h2>
@@ -272,6 +289,20 @@
     <div class="step"><div class="step-num">1</div><h4>Register Your Interest</h4><p>Fill in the form below. No payment taken now — this is just a registration of interest.</p></div>
     <div class="step"><div class="step-num">2</div><h4>We Build Your Listing</h4><p>We create your full profile. You review it, request changes, and approve before anything goes live.</p></div>
     <div class="step"><div class="step-num">3</div><h4>Go Live &amp; Get Found</h4><p>Once you're happy, choose your plan and your auction house starts appearing in front of thousands of buyers.</p></div>
+  </div>
+</section>
+
+<!-- APP PREVIEW: Listing Detail + Contact -->
+<section class="app-preview reveal" style="background: var(--off-white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="app-preview-inner">
+    <p class="section-label">Your Listing</p>
+    <h2 class="section-title">This Is What Your<br>Auction House Profile Looks Like</h2>
+    <p class="section-subtitle">A rich, detailed listing with your branding, contact info, location map, upcoming sales, and a direct link to your website.</p>
+    <div class="phone-row-3">
+      <img src="4.png" alt="Auction house listing with featured badge, stats and contact buttons">
+      <img src="5.png" alt="Contact information, location map and services">
+      <img src="3.png" alt="Saved auction houses with alerts and following features">
+    </div>
   </div>
 </section>
 
@@ -409,7 +440,7 @@
 
 <section class="learn-more-section">
   <p>Still have questions? Want to know more before registering?</p>
-  <a href="/cdn-cgi/l/email-protection#4a2926232f243e390a2b3f293e2325242b3a3a642925643f21" class="learn-more-link">Get in touch with us</a>
+  <a href="mailto:clients@auctionapp.co.uk" class="learn-more-link">Get in touch with us</a>
 </section>
 
 <section class="faq" id="faq">
@@ -425,13 +456,17 @@
   <div class="faq-item reveal"><button class="faq-question" onclick="toggleFaq(this)">Who's behind Auction App?<span class="faq-icon">+</span></button><div class="faq-answer"><p>A team with over 20 years of marketing experience and 7+ years of hands-on experience in the UK auction industry. Not a tech startup guessing what auctioneers need — a team that's worked the salerooms, managed sales, and seen firsthand how outdated and overpriced the existing platforms have become.</p></div></div>
 </section>
 
-<footer><p>© 2025 Auction App UK. The UK's first and only auctioneers directory app. <a href="/cdn-cgi/l/email-protection#c5a6a9aca0abb1b685a4b0a6b1acaaaba4b5b5eba6aaebb0ae"><span class="__cf_email__" data-cfemail="26454a4f4348525566475345524f494847565608454908534d">[email&#160;protected]</span></a></p></footer>
+<footer><p>© 2025 Auction App UK. The UK's first and only auctioneers directory app. <a href="mailto:clients@auctionapp.co.uk">clients@auctionapp.co.uk</a></p></footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-var reveals=document.querySelectorAll('.reveal');var observer=new IntersectionObserver(function(e){e.forEach(function(entry,i){if(entry.isIntersecting){setTimeout(function(){entry.target.classList.add('visible')},i*50);observer.unobserve(entry.target)}})},{threshold:0.1});reveals.forEach(function(el){observer.observe(el)});
+<script>
+var reveals=document.querySelectorAll('.reveal');
+var observer=new IntersectionObserver(function(e){e.forEach(function(entry,i){if(entry.isIntersecting){setTimeout(function(){entry.target.classList.add('visible')},i*50);observer.unobserve(entry.target)}})},{threshold:0.1});
+reveals.forEach(function(el){observer.observe(el)});
 function toggleFaq(b){var item=b.parentElement;var open=item.classList.contains('open');var all=document.querySelectorAll('.faq-item');for(var i=0;i<all.length;i++){all[i].classList.remove('open')}if(!open)item.classList.add('open')}
 document.getElementById('signupForm').addEventListener('submit',function(e){e.preventDefault();var form=e.target;var data={};var fd=new FormData(form);fd.forEach(function(v,k){data[k]=v});data.submitted_at=new Date().toISOString();fetch('https://formspree.io/f/maqdyryz',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});form.style.display='none';document.getElementById('formSuccess').classList.add('show')});
-function updateCountdown(){var end=new Date('2026-02-15T23:59:59').getTime();var now=new Date().getTime();var diff=end-now;if(diff<=0){document.getElementById('cd-days').textContent='0';document.getElementById('cd-hours').textContent='0';document.getElementById('cd-mins').textContent='0';document.getElementById('cd-secs').textContent='0';return}var d=Math.floor(diff/(1000*60*60*24));var h=Math.floor((diff%(1000*60*60*24))/(1000*60*60));var m=Math.floor((diff%(1000*60*60))/(1000*60));var s=Math.floor((diff%(1000*60))/1000);document.getElementById('cd-days').textContent=d;document.getElementById('cd-hours').textContent=h<10?'0'+h:h;document.getElementById('cd-mins').textContent=m<10?'0'+m:m;document.getElementById('cd-secs').textContent=s<10?'0'+s:s}updateCountdown();setInterval(updateCountdown,1000);
+function updateCountdown(){var end=new Date('2026-02-15T23:59:59').getTime();var now=new Date().getTime();var diff=end-now;if(diff<=0){document.getElementById('cd-days').textContent='0';document.getElementById('cd-hours').textContent='0';document.getElementById('cd-mins').textContent='0';document.getElementById('cd-secs').textContent='0';return}var d=Math.floor(diff/(1000*60*60*24));var h=Math.floor((diff%(1000*60*60*24))/(1000*60*60));var m=Math.floor((diff%(1000*60*60))/(1000*60));var s=Math.floor((diff%(1000*60))/1000);document.getElementById('cd-days').textContent=d;document.getElementById('cd-hours').textContent=h<10?'0'+h:h;document.getElementById('cd-mins').textContent=m<10?'0'+m:m;document.getElementById('cd-secs').textContent=s<10?'0'+s:s}
+updateCountdown();setInterval(updateCountdown,1000);
+setTimeout(function(){var r=document.querySelectorAll('.reveal');for(var i=0;i<r.length;i++){r[i].classList.add('visible')}},2000);
 </script>
 <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=YfgzeN"></script>
 </body>
